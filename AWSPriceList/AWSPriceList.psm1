@@ -237,7 +237,7 @@ Function Get-AWSPriceListProductInformation {
 			try 
 			{
 				$Products += $_.Name
-				$Urls += "$script:PriceListBaseUrl$($IndexFileContents.offers | Select-Object -ExpandProperty $_.Name | Select-Object -ExpandProperty currentVersionUrl)"
+				$Urls += "$script:PriceListBaseUrl$($OfferIndexFile.offers | Select-Object -ExpandProperty $_.Name | Select-Object -ExpandProperty currentVersionUrl)"
 			}
 			catch 
 			{
